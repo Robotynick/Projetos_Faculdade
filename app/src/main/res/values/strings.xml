@@ -10,6 +10,11 @@
     <string name="contentDescription_Bola_amarela_inferior">Bola amarela inferior</string>
     <string name="contentDescription_Bola_azul_superior">Bola azul superior</string>
     <string name="contentDescription_Bola_amarela_superior">Bola amarela superior</string>
+    <string name="bt_Enviar">Enviar</string>
+    <string name="text_inserir_email">Insira o E-mail</string>
+    <string name="text_new_password">Nova senha</string>
+    <string name="text_confirm_password">Confirme senha</string>
+    <string name="text_change_password">Mudar senha</string>
 
 
 </resources>
