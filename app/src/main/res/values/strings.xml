@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">EPROCAD App</string>
+    <string name="bt_entrar">Entrar</string>
+    <string name="email">E-mail</string>
+    <string name="senha">Senha</string>
+    <string name="bt_forgotten_password">Esqueci minha senha</string>
+    <string name="bt_create_account">Crie sua conta</string>
+    <string name="contentDescription_logo">Logo da fundação EPROCAD</string>
+    <string name="contentDescription_Bola_azul_inferior">Bola azul inferior</string>
+    <string name="contentDescription_Bola_amarela_inferior">Bola amarela inferior</string>
+    <string name="contentDescription_Bola_azul_superior">Bola azul superior</string>
+    <string name="contentDescription_Bola_amarela_superior">Bola amarela superior</string>
+
+
+</resources>
