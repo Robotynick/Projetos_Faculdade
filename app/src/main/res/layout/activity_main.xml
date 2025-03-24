@@ -13,8 +13,6 @@
         android:layout_height="match_parent"
         android:fillViewport="true">
 
-
-
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -66,8 +64,8 @@
                 android:inputType="textEmailAddress"
                 android:minHeight="48dp"
                 android:textColorHint="#757575"
-                app:layout_constraintEnd_toEndOf="@id/containerComponents"
                 app:layout_constraintStart_toStartOf="@id/containerComponents"
+                app:layout_constraintEnd_toEndOf="@id/containerComponents"
                 app:layout_constraintTop_toTopOf="@id/containerComponents"
                 app:layout_constraintWidth_percent="0.60"
                 tools:ignore="TextContrastCheck" />
@@ -144,6 +142,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:visibility="invisible"
+                android:indeterminateTint="@color/blue_ball_login"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

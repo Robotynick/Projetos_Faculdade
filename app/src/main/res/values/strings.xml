@@ -13,8 +13,14 @@
     <string name="bt_Enviar">Enviar</string>
     <string name="text_inserir_email">Insira o E-mail</string>
     <string name="text_new_password">Nova senha</string>
-    <string name="text_confirm_password">Confirme senha</string>
+    <string name="text_confirm_password">Confirme a senha</string>
     <string name="text_change_password">Mudar senha</string>
+    <string name="text_name_sign_up">Nome completo</string>
+    <string name="text_age_sign_up">Idade</string>
+    <string name="text_password">Senha</string>
+    <string name="text_register">Registre-se</string>
+    <string name="bt_sign_up">Cadastrar</string>
+
 
 
 </resources>

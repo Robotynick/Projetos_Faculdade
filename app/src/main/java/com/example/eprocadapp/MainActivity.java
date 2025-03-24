@@ -15,6 +15,8 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
 
     private TextView forgotten_password_id;
+    private TextView create_account_id;
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +29,10 @@ public class MainActivity extends AppCompatActivity {
 
         forgotten_password_id.setOnClickListener(v -> {
             Intent intent= new Intent(MainActivity.this, FormResetPassword1.class);
+            startActivity(intent);
+        });
+        create_account_id.setOnClickListener(v -> {
+            Intent intent= new Intent(MainActivity.this, FormSignUp.class);
             startActivity(intent);
         });
 
@@ -44,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         }
     private void IniciarComponentes(){
         forgotten_password_id = findViewById(R.id.forgotten_password_id);
+        create_account_id = findViewById(R.id.create_account_id);
 
     }
 

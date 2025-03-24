@@ -13,7 +13,7 @@
         android:theme="@style/Theme.EPROCADApp"
         tools:targetApi="31">
         <activity
-            android:name=".teste"
+            android:name=".FormEmObras"
             android:exported="false" />
         <activity
             android:name=".FormSignUp"
