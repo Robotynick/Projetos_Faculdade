@@ -49,20 +49,7 @@
                 android:layout_marginTop="16dp" />
 
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/register"
-                style="@style/Forgotten_password"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:maxWidth="320dp"
-                android:text="@string/text_register"
-                android:textAlignment="center"
-                android:textColor="#616161"
-                android:background="#00000000"
-                app:layout_constraintEnd_toEndOf="@id/containerComponents"
-                app:layout_constraintStart_toStartOf="@id/containerComponents"
-                app:layout_constraintTop_toTopOf="@id/containerComponents"
-                app:layout_constraintWidth_percent="0.4"/>
+
 
             <EditText
                 android:id="@+id/edit_name_sign_up"
@@ -78,7 +65,7 @@
                 android:textColorHint="#757575"
                 app:layout_constraintEnd_toEndOf="@id/containerComponents"
                 app:layout_constraintStart_toStartOf="@id/containerComponents"
-                app:layout_constraintTop_toBottomOf="@id/register"
+                app:layout_constraintTop_toTopOf="@id/containerComponents"
                 app:layout_constraintWidth_percent="0.60"
                 tools:ignore="TextContrastCheck" />
 
@@ -144,7 +131,7 @@
                 android:autofillHints="emailAddress"
                 android:drawableStart="@drawable/ic_locker_password"
                 android:hint="@string/text_confirm_password"
-                android:inputType="textEmailAddress"
+                android:inputType="textPassword"
                 android:minHeight="48dp"
                 android:textColorHint="#757575"
                 app:layout_constraintEnd_toEndOf="@id/containerComponents"
@@ -154,12 +141,12 @@
                 tools:ignore="TextContrastCheck" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/sent"
+                android:id="@+id/bt_sent"
                 style="@style/Button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:maxWidth="320dp"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="70dp"
                 android:text="@string/bt_sign_up"
                 android:textAlignment="center"
                 android:textColor="@color/white"

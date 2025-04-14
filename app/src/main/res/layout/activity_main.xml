@@ -90,7 +90,7 @@
                 tools:ignore="TextContrastCheck" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button_id"
+                android:id="@+id/bt_login"
                 style="@style/Button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -135,7 +135,7 @@
                 android:background="#00000000"
                 app:layout_constraintEnd_toEndOf="@id/containerComponents"
                 app:layout_constraintStart_toStartOf="@id/containerComponents"
-                app:layout_constraintTop_toBottomOf="@id/button_id"
+                app:layout_constraintTop_toBottomOf="@id/bt_login"
                 app:layout_constraintWidth_percent="0.30"/>
             <ProgressBar
                 android:id="@+id/progressbar"
