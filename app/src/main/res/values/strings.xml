@@ -20,6 +20,7 @@
     <string name="text_password">Senha</string>
     <string name="text_register">Registre-se</string>
     <string name="bt_sign_up">Cadastrar</string>
+    <string name="bt_ic_eyeslash">Ícone para ver a senha digitada</string>
 
 
 

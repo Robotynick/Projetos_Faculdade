@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_login"
-    tools:context=".FormSignUp">
+    tools:context=".SignUpScreen">
 
 <androidx.core.widget.NestedScrollView
     android:layout_width="match_parent"
@@ -22,6 +22,20 @@
             android:layout_height="match_parent"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="25dp">
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/bt_voltar"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/bt_ic_eyeslash"
+                android:src="@drawable/bt_voltar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.044"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.018" />
 
             <ImageView
                 android:id="@+id/logo"
@@ -54,11 +68,12 @@
             <EditText
                 android:id="@+id/edit_name_sign_up"
                 style="@style/Edit_Text"
-                android:layout_width="0dp"
+                android:layout_width="270dp"
                 android:layout_height="wrap_content"
                 android:maxWidth="320dp"
                 android:autofillHints="name"
                 android:drawableStart="@drawable/ic_person"
+                android:drawablePadding="8dp"
                 android:hint="@string/text_name_sign_up"
                 android:inputType="textPersonName"
                 android:minHeight="48dp"
@@ -72,16 +87,19 @@
             <EditText
                 android:id="@+id/edit_age"
                 style="@style/Edit_Text"
-                android:layout_width="0dp"
+                android:layout_width="270dp"
                 android:layout_height="wrap_content"
-                android:maxWidth="320dp"
+                android:layout_marginTop="12dp"
                 android:autofillHints="creditCardNumber"
-                android:drawableStart="@drawable/ic_email"
+                android:drawableStart="@drawable/ic_calendar"
+                android:drawablePadding="8dp"
                 android:hint="@string/text_age_sign_up"
                 android:inputType="number"
+                android:maxWidth="320dp"
                 android:minHeight="48dp"
                 android:textColorHint="#757575"
                 app:layout_constraintEnd_toEndOf="@id/containerComponents"
+                app:layout_constraintHorizontal_bias="0.495"
                 app:layout_constraintStart_toStartOf="@id/containerComponents"
                 app:layout_constraintTop_toBottomOf="@id/edit_name_sign_up"
                 app:layout_constraintWidth_percent="0.60"
@@ -90,10 +108,12 @@
             <EditText
                 android:id="@+id/edit_email_sing_up"
                 style="@style/Edit_Text"
-                android:layout_width="0dp"
+                android:layout_width="270dp"
                 android:layout_height="wrap_content"
                 android:maxWidth="320dp"
                 android:autofillHints="emailAddress"
+                android:drawableStart="@drawable/ic_email"
+                android:drawablePadding="8dp"
                 android:hint="@string/email"
                 android:inputType="textEmailAddress"
                 android:minHeight="48dp"
@@ -107,11 +127,12 @@
             <EditText
                 android:id="@+id/edit_password_sign_up"
                 style="@style/Edit_Text"
-                android:layout_width="0dp"
+                android:layout_width="270dp"
                 android:layout_height="wrap_content"
                 android:maxWidth="320dp"
                 android:autofillHints="password"
                 android:drawableStart="@drawable/ic_locker_password"
+                android:drawablePadding="8dp"
                 android:hint="@string/text_password"
                 android:inputType="textPassword"
                 android:minHeight="48dp"
@@ -125,11 +146,12 @@
             <EditText
                 android:id="@+id/edit_confirm_password_sign_up"
                 style="@style/Edit_Text"
-                android:layout_width="0dp"
+                android:layout_width="270dp"
                 android:layout_height="wrap_content"
                 android:maxWidth="320dp"
                 android:autofillHints="emailAddress"
                 android:drawableStart="@drawable/ic_locker_password"
+                android:drawablePadding="8dp"
                 android:hint="@string/text_confirm_password"
                 android:inputType="textPassword"
                 android:minHeight="48dp"
@@ -143,10 +165,10 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/bt_sent"
                 style="@style/Button"
-                android:layout_width="0dp"
+                android:layout_width="190dp"
                 android:layout_height="wrap_content"
                 android:maxWidth="320dp"
-                android:layout_marginTop="70dp"
+                android:layout_marginTop="45dp"
                 android:text="@string/bt_sign_up"
                 android:textAlignment="center"
                 android:textColor="@color/white"

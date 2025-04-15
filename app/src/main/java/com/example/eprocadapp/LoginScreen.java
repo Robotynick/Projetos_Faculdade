@@ -3,6 +3,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
+import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,6 +13,7 @@ import androidx.activity.EdgeToEdge;
 import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatImageButton;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -20,23 +22,24 @@ import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
+import com.google.firebase.auth.FirebaseUser;
+
 import java.util.Objects;
 
-public class MainActivity extends AppCompatActivity {
+public class LoginScreen extends AppCompatActivity {
 
     private TextView forgotten_password_id;
     private TextView create_account_id;
     private EditText edit_email, edit_password;
+    private AppCompatImageButton bt_eyeslash;
     private Button bt_login;
     private ProgressBar progressBar;
-    String[] login_messages = {"Preencha todos os campos"};
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.login_screen);
 
         OnBackPressedCallback callback = new OnBackPressedCallback(true) {
             @Override
@@ -51,18 +54,29 @@ public class MainActivity extends AppCompatActivity {
 
 
         Objects.requireNonNull(getSupportActionBar()).hide();
-        IniciarComponentes();
+        StartComponents();
         forgotten_password_id.setOnClickListener(v -> {
-            Intent intent= new Intent(MainActivity.this, FormResetPassword1.class);
+            Intent intent= new Intent(LoginScreen.this, ResetPasswordScreen_1.class);
             startActivity(intent);
         });
         create_account_id.setOnClickListener(v -> {
-            Intent intent= new Intent(MainActivity.this, FormSignUp.class);
+            Intent intent= new Intent(LoginScreen.this, SignUpScreen.class);
             startActivity(intent);
         });
 
-
-
+        bt_eyeslash.setOnClickListener(v -> {
+            if (edit_password.getInputType() == (InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD)) {
+                // Mostrar a senha
+                edit_password.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+                bt_eyeslash.setImageResource(R.drawable.ic_eyeslash_open);
+            } else {
+                // Ocultar a senha
+                edit_password.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                bt_eyeslash.setImageResource(R.drawable.ic_eyeslash);
+            }
+            // Posiciona o cursor no final
+            edit_password.setSelection(edit_password.getText().length());
+        });
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -75,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
             String email = edit_email.getText().toString();
             String password = edit_password.getText().toString();
             if (email.isEmpty() || password.isEmpty()){
-                Snackbar snackbar = Snackbar.make(v,login_messages[0],Snackbar.LENGTH_SHORT);
+                Snackbar snackbar = Snackbar.make(v,"Preencha todos os campos",Snackbar.LENGTH_SHORT);
                 snackbar.setBackgroundTint(Color.WHITE);
                 snackbar.setTextColor(Color.BLACK);
                 snackbar.show();
@@ -83,9 +97,7 @@ public class MainActivity extends AppCompatActivity {
                 UserAuthentication(v);
             }
         });
-
-        }
-
+    }
     private void UserAuthentication(View view) {
         String email = edit_email.getText().toString().trim();
         String password = edit_password.getText().toString();
@@ -98,52 +110,57 @@ public class MainActivity extends AppCompatActivity {
             snackbar.show();
             return;
         }
-
         // Tenta autenticar o usuário com e-mail e senha diretamente
         FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password).addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
-                // Login bem-sucedido
+                //Se bem sucedido, mostra a progression bar
                 progressBar.setVisibility(View.VISIBLE);
-                new Handler().postDelayed(this::FormEmObras, 3000);
+                new Handler().postDelayed(this::ScreenUnderConstruction, 3000);
             } else {
-                String erro = getErro(task);
-
-                Snackbar snackbar = Snackbar.make(view, erro, Snackbar.LENGTH_SHORT);
+                //Se der algum erro, aparece uma mensagem informando o erro.
+                String error = getError(task);
+                Snackbar snackbar = Snackbar.make(view, error, Snackbar.LENGTH_SHORT);
                 snackbar.setBackgroundTint(Color.WHITE);
                 snackbar.setTextColor(Color.BLACK);
                 snackbar.show();
             }
         });
     }
-
+    @Override
+    protected void onStart() {
+        super.onStart();
+        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+        if (currentUser != null){
+            ScreenUnderConstruction();
+        }
+    }
     @NonNull
-    private static String getErro(Task<AuthResult> task) {
-        String erro;
+    private static String getError(Task<AuthResult> task) {
+        String error;
         try {
             throw Objects.requireNonNull(task.getException());
         }catch (FirebaseAuthInvalidCredentialsException e) {
             // Senha incorreta
-            erro = "Senha incorreta ou e-mail não cadastrado. Verifique e tente novamente.";
+            error = "Senha incorreta ou e-mail não cadastrado. Verifique e tente novamente.";
         } catch (Exception e) {
             // Outros erros
-            erro = "Erro ao autenticar. Tente novamente.";
+            error = "Erro ao autenticar. Tente novamente.";
         }
-        return erro;
+        return error;
     }
-
-    private void FormEmObras(){
-        Intent intent = new Intent(MainActivity.this, FormEmObras.class);
+    private void ScreenUnderConstruction(){
+        Intent intent = new Intent(LoginScreen.this, ScreenUnderConstruction.class);
         startActivity(intent);
         finish();
     }
-    private void IniciarComponentes(){
+    private void StartComponents(){
         forgotten_password_id = findViewById(R.id.forgotten_password_id);
         create_account_id = findViewById(R.id.create_account_id);
         edit_email = findViewById(R.id.edit_email);
         edit_password = findViewById(R.id.edit_password);
         bt_login = findViewById(R.id.bt_login);
         progressBar = findViewById(R.id.progressbar);
+        bt_eyeslash = findViewById(R.id.bt_eyeslash);
 
     }
-
 }

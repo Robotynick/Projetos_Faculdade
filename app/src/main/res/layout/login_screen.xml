@@ -6,8 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_login"
-    tools:context=".FormResetPassword2">
-
+    tools:context=".LoginScreen">
 
 <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -29,6 +28,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
+                app:layout_constraintDimensionRatio="1:1"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginTop="230dp"
@@ -41,6 +41,7 @@
                 android:contentDescription="@string/contentDescription_logo"/>
 
 
+
             <View
                 android:id="@+id/containerComponents"
                 style="@style/ContainerComponents"
@@ -48,74 +49,124 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.53"/>
+                app:layout_constraintVertical_bias="0.53"
+                />
 
             <EditText
-                android:id="@+id/newPassword"
+                android:id="@+id/edit_email"
                 style="@style/Edit_Text"
-                android:layout_width="0dp"
+                android:layout_width="270dp"
                 android:layout_height="wrap_content"
                 android:maxWidth="320dp"
-                android:autofillHints="password"
-                android:drawableStart="@drawable/ic_locker_password"
-                android:drawableEnd="@drawable/ic_eyeslash"
-                android:hint="@string/text_new_password"
-                android:inputType="textPassword"
+                android:autofillHints="emailAddress"
+                android:drawableStart="@drawable/ic_email"
+                android:drawablePadding="8dp"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
                 android:minHeight="48dp"
                 android:textColorHint="#757575"
-                app:layout_constraintEnd_toEndOf="@id/containerComponents"
                 app:layout_constraintStart_toStartOf="@id/containerComponents"
+                app:layout_constraintEnd_toEndOf="@id/containerComponents"
                 app:layout_constraintTop_toTopOf="@id/containerComponents"
                 app:layout_constraintWidth_percent="0.60"
                 tools:ignore="TextContrastCheck" />
 
+
+
             <EditText
-                android:id="@+id/confirmPassword"
+                android:id="@+id/edit_password"
                 style="@style/Edit_Text"
-                android:layout_width="0dp"
+                android:layout_width="270dp"
                 android:layout_height="wrap_content"
                 android:maxWidth="320dp"
                 android:autofillHints="password"
                 android:drawableStart="@drawable/ic_locker_password"
-                android:drawableEnd="@drawable/ic_eyeslash"
-                android:hint="@string/text_confirm_password"
+                android:drawablePadding="8dp"
+                android:hint="@string/senha"
                 android:inputType="textPassword"
                 android:minHeight="48dp"
                 android:textColorHint="#757575"
                 app:layout_constraintEnd_toEndOf="@id/containerComponents"
                 app:layout_constraintStart_toStartOf="@id/containerComponents"
-                app:layout_constraintTop_toBottomOf="@id/newPassword"
+                app:layout_constraintTop_toBottomOf="@id/edit_email"
                 app:layout_constraintWidth_percent="0.60"
                 tools:ignore="TextContrastCheck" />
 
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/bt_eyeslash"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_eyeslash"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/edit_password"
+                app:layout_constraintHorizontal_bias="0.965"
+                app:layout_constraintStart_toStartOf="@id/edit_password"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.494"
+                android:contentDescription="@string/bt_ic_eyeslash"
+                />
+
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button_id"
+                android:id="@+id/bt_login"
                 style="@style/Button"
-                android:layout_width="0dp"
+                android:layout_width="180dp"
                 android:layout_height="wrap_content"
                 android:maxWidth="320dp"
                 android:layout_marginTop="12dp"
-                android:text="@string/text_change_password"
+                android:text="@string/bt_entrar"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="17sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@id/containerComponents"
                 app:layout_constraintStart_toStartOf="@id/containerComponents"
-                app:layout_constraintTop_toBottomOf="@id/confirmPassword"
+                app:layout_constraintTop_toBottomOf="@id/forgotten_password_id"
                 app:layout_constraintWidth_percent="0.45"
                 tools:ignore="TextSizeCheck"/>
 
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/forgotten_password_id"
+                style="@style/Forgotten_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="320dp"
+                android:text="@string/bt_forgotten_password"
+                android:textAlignment="center"
+                android:textColor="#616161"
+                android:background="#00000000"
+                app:layout_constraintEnd_toEndOf="@id/containerComponents"
+                app:layout_constraintStart_toStartOf="@id/containerComponents"
+                app:layout_constraintTop_toBottomOf="@id/edit_password"
+                app:layout_constraintWidth_percent="0.4"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/create_account_id"
+                style="@style/Forgotten_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="320dp"
+                android:text="@string/bt_create_account"
+                android:textColor="#000000"
+                android:textAlignment="center"
+                android:background="#00000000"
+                app:layout_constraintEnd_toEndOf="@id/containerComponents"
+                app:layout_constraintStart_toStartOf="@id/containerComponents"
+                app:layout_constraintTop_toBottomOf="@id/bt_login"
+                app:layout_constraintWidth_percent="0.30"/>
             <ProgressBar
                 android:id="@+id/progressbar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:visibility="invisible"
+                android:indeterminateTint="@color/blue_ball_login"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.53"/>
+                app:layout_constraintVertical_bias="0.53"
+                />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
