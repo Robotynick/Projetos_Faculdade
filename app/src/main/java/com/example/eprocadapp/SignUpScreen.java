@@ -64,9 +64,7 @@ public class SignUpScreen extends AppCompatActivity {
 
 
         });
-        bt_voltar.setOnClickListener(v -> {
-            finish();
-        });
+        bt_voltar.setOnClickListener(v -> finish());
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -172,7 +170,7 @@ public class SignUpScreen extends AppCompatActivity {
         private void SaveUser(){
             String name = edit_name_sign_up.getText().toString();
             String age = edit_age.getText().toString();
-            String email = edit_email_sing_up.getText().toString();
+            String email = edit_email_sing_up.getText().toString().toLowerCase();
             String password = edit_password_sign_up.getText().toString();
 
             FirebaseFirestore db = FirebaseFirestore.getInstance();

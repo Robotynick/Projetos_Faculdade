@@ -23,7 +23,6 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseUser;
-
 import java.util.Objects;
 
 public class LoginScreen extends AppCompatActivity {
@@ -55,6 +54,7 @@ public class LoginScreen extends AppCompatActivity {
 
         Objects.requireNonNull(getSupportActionBar()).hide();
         StartComponents();
+
         forgotten_password_id.setOnClickListener(v -> {
             Intent intent= new Intent(LoginScreen.this, ResetPasswordScreen_1.class);
             startActivity(intent);
@@ -110,6 +110,7 @@ public class LoginScreen extends AppCompatActivity {
             snackbar.show();
             return;
         }
+
         // Tenta autenticar o usuário com e-mail e senha diretamente
         FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password).addOnCompleteListener(task -> {
             if (task.isSuccessful()) {

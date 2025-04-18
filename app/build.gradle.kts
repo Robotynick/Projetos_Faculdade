@@ -44,5 +44,7 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
     implementation("com.google.firebase:firebase-auth")
     implementation("com.google.firebase:firebase-firestore")
+    implementation ("com.google.android.gms:play-services-base:18.0.1")
+    implementation ("com.google.android.gms:play-services-tasks:18.0.1")
 
 }
