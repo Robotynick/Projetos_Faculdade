@@ -59,4 +59,20 @@
         <item name="android:layout_marginTop">15dp</item>
     </style>
 
+    <style name="SearchViewStyle" parent="Widget.AppCompat.SearchView">
+        <item name="android:background">@drawable/bg_ic_search</item>
+        <item name="android:queryBackground">@color/transparent</item>
+    </style>
+
+    <style name="ContainerComponents_2">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">400dp</item>
+        <item name="android:background">@color/bg_login</item>
+    </style>
+
+    <style name="StandartButton">
+        <item name="background">@drawable/bt_standart</item>
+        <item name="android:layout_margin">20dp</item>
+    </style>
+
 </resources>

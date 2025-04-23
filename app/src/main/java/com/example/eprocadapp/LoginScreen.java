@@ -150,7 +150,7 @@ public class LoginScreen extends AppCompatActivity {
         return error;
     }
     private void ScreenUnderConstruction(){
-        Intent intent = new Intent(LoginScreen.this, ScreenUnderConstruction.class);
+        Intent intent = new Intent(LoginScreen.this, MainScreen.class);
         startActivity(intent);
         finish();
     }

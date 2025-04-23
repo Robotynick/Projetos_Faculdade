@@ -21,7 +21,15 @@
     <string name="text_register">Registre-se</string>
     <string name="bt_sign_up">Cadastrar</string>
     <string name="bt_ic_eyeslash">Ícone para ver a senha digitada</string>
-
+    <string name="bt_profile">Botão de perfil</string>
+    <string name="lb_methodologies">Metodologias</string>
+    <string name="lb_activities">Atividades</string>
+    <string name="lb_news">Notícias</string>
+    <string name="lb_calendar">Calendário</string>
+    <string name="lb_work_with_us">Trabalhe Conosco</string>
+    <string name="lb_educators_space">Portal do Professor</string>
+    <string name="lb_quiz">Quiz</string>
+    <string name="lb_human_values">Valores Humanos</string>
 
 
 </resources>

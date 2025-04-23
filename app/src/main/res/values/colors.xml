@@ -12,5 +12,6 @@
     <color name="yellow_ball_login">#FFFF00</color>
     <color name="Botao_entrar">#3C63A3</color>
     <color name="blue_ball_login">#224277</color>
+    <color name="transparent">#00000000</color>
 
 </resources>
