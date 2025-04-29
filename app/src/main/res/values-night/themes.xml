@@ -13,4 +13,17 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="Edit_Text">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/bg_bt_login</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="layout_constraintWidth_percent"> 0.70</item>
+        <item name="layout_constraintWidth_max">488dp</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:textColorHint">#FFFFFF</item>
+    </style>
 </resources>

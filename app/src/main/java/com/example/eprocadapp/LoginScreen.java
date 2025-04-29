@@ -89,7 +89,7 @@ public class LoginScreen extends AppCompatActivity {
             String email = edit_email.getText().toString();
             String password = edit_password.getText().toString();
             if (email.isEmpty() || password.isEmpty()){
-                Snackbar snackbar = Snackbar.make(v,"Preencha todos os campos",Snackbar.LENGTH_SHORT);
+                Snackbar snackbar = Snackbar.make(v, "Preencha todos os campos", Snackbar.LENGTH_SHORT);
                 snackbar.setBackgroundTint(Color.WHITE);
                 snackbar.setTextColor(Color.BLACK);
                 snackbar.show();

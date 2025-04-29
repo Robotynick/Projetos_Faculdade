@@ -23,22 +23,22 @@
             android:exported="false" />
         <activity
             android:name=".SignUpScreen"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".ResetPasswordScreen_2"
-            android:exported="true" />
+            android:exported="false"
+            android:screenOrientation="sensorPortrait"
+            tools:ignore="DiscouragedApi,LockedOrientationActivity" />
         <activity
             android:name=".ResetPasswordScreen_1"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".LoginScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>
-
 </manifest>
