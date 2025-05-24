@@ -1,4 +1,4 @@
-package com.example.eprocadapp;
+package com.example.Eprocad;
 
 import android.content.Context;
 

@@ -8,10 +8,17 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="bg_login">#E5E5E5</color>
-    <color name="bt_login">#3C63A3</color>
     <color name="yellow_ball_login">#FFFF00</color>
-    <color name="Botao_entrar">#3C63A3</color>
+    <color name="bg_bt_login">#3C63A3</color>
     <color name="blue_ball_login">#224277</color>
     <color name="transparent">#00000000</color>
+    <color name="bg_logo">#E5E5E5</color>
+    <color name="bg_forgotten_password">#00000000</color>
+    <color name="bt_forgotten_password">#616161</color>
+    <color name="bt_login">@color/white</color>
+    <color name="ic_standard">#7B7979</color>
+    <color name="bg_edit_text_standard">@color/white</color>
+    <color name="color_hint_edit_text">#757575</color>
+
 
 </resources>

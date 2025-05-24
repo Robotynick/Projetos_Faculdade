@@ -26,9 +26,7 @@
             android:exported="false" />
         <activity
             android:name=".ResetPasswordScreen_2"
-            android:exported="false"
-            android:screenOrientation="sensorPortrait"
-            tools:ignore="DiscouragedApi,LockedOrientationActivity" />
+            android:exported="false" />
         <activity
             android:name=".ResetPasswordScreen_1"
             android:exported="false" />

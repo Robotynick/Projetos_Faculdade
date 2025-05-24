@@ -1,4 +1,4 @@
-package com.example.eprocadapp;
+package com.example.Eprocad;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -68,11 +68,11 @@ public class LoginScreen extends AppCompatActivity {
             if (edit_password.getInputType() == (InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD)) {
                 // Mostrar a senha
                 edit_password.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
-                bt_eyeslash.setImageResource(R.drawable.ic_eyeslash_open);
+                bt_eyeslash.setImageResource(R.drawable.ic_eye);
             } else {
                 // Ocultar a senha
                 edit_password.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
-                bt_eyeslash.setImageResource(R.drawable.ic_eyeslash);
+                bt_eyeslash.setImageResource(R.drawable.ic_eye_off);
             }
             // Posiciona o cursor no final
             edit_password.setSelection(edit_password.getText().length());

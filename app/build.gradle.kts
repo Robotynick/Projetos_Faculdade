@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.eprocadapp"
+    namespace = "com.example.Eprocad"
     compileSdk = 35
 
     defaultConfig {

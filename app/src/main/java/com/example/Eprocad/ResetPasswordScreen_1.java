@@ -1,4 +1,4 @@
-package com.example.eprocadapp;
+package com.example.Eprocad;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.TextUtils;

@@ -33,7 +33,7 @@
         <item name="layout_constraintWidth_max">488dp</item>
         <item name="android:minHeight">48dp</item>
         <item name="android:drawablePadding">8dp</item>
-        <item name="android:textColorHint">#757575</item>
+        <item name="android:textColorHint">@color/color_hint_edit_text</item>
     </style>
 
     <style name="Forgotten_password">
@@ -54,12 +54,11 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">5dp</item>
         <item name="android:textAlignment">center</item>
-        <item name="android:textColor">@color/white</item>
+        <item name="android:textColor">@color/bt_login</item>
         <item name="android:textSize">17sp</item>
         <item name="android:textStyle">bold</item>
         <item name="layout_constraintWidth_max">320dp</item>
         <item name="layout_constraintWidth_percent">0.45</item>
-
     </style>
 
     <style name="Create_account">
