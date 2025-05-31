@@ -16,22 +16,22 @@
         android:theme="@style/Theme.EPROCADApp"
         tools:targetApi="31">
         <activity
-            android:name=".MainScreen"
+            android:name=".view.MainScreen"
             android:exported="false" />
         <activity
-            android:name=".ScreenUnderConstruction"
+            android:name=".view.ScreenUnderConstruction"
             android:exported="false" />
         <activity
-            android:name=".SignUpScreen"
+            android:name="com.example.Eprocad.view.SignUpScreen"
             android:exported="false" />
         <activity
-            android:name=".ResetPasswordScreen_2"
+            android:name=".view.ResetPasswordScreen_2"
             android:exported="false" />
         <activity
-            android:name=".ResetPasswordScreen_1"
+            android:name=".view.ResetPasswordScreen_1"
             android:exported="false" />
         <activity
-            android:name=".LoginScreen"
+            android:name="com.example.Eprocad.view.LoginScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

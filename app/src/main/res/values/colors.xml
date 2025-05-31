@@ -19,6 +19,8 @@
     <color name="ic_standard">#7B7979</color>
     <color name="bg_edit_text_standard">@color/white</color>
     <color name="color_hint_edit_text">#757575</color>
+    <color name="text_color">#757575</color>
+
 
 
 </resources>

@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Theme.EPROCADApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
@@ -23,6 +23,8 @@
     <color name="ic_standard">@color/black</color>
     <color name="bg_edit_text_standard">#E5E5E5</color>
     <color name="color_hint_edit_text">@color/black</color>
+    <color name="text_color">@color/black</color>
+
 
 
 </resources>

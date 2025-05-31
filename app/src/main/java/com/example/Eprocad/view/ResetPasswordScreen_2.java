@@ -1,31 +1,34 @@
-package com.example.Eprocad;
+package com.example.Eprocad.view;
+
 import android.os.Bundle;
-import android.widget.Button;
+
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatImageButton;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import com.google.firebase.auth.FirebaseAuth;
+
+import com.example.Eprocad.R;
+
 import java.util.Objects;
 
-public class MainScreen extends AppCompatActivity {
+public class ResetPasswordScreen_2 extends AppCompatActivity {
 
-    private Button bt_voltar10;
+    private AppCompatImageButton bt_voltar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main_screen);
-        Objects.requireNonNull(getSupportActionBar()).hide();
-        IniciarComponentes();
+        setContentView(R.layout.reset_password_screen_2);
 
-        // Adiciona uma ação ao botão que, ao ser clicado, inicia a LoginScreen.
-        bt_voltar10.setOnClickListener(v -> {
-            FirebaseAuth.getInstance().signOut(); // Realiza o logout do usuário
-            finish();
-        });
+        Objects.requireNonNull(getSupportActionBar()).hide();
+        containerComponents();
+
+        bt_voltar.setOnClickListener(v -> finish());
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -33,7 +36,10 @@ public class MainScreen extends AppCompatActivity {
             return insets;
         });
     }
-    private void IniciarComponentes(){
-        bt_voltar10 = findViewById(R.id.bt_voltar10);
+
+    private void containerComponents() {
+        bt_voltar = findViewById(R.id.bt_voltar);
+
+
     }
 }

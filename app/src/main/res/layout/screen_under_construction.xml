@@ -5,27 +5,27 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ScreenUnderConstruction"
-    android:background="@drawable/bg_quarta_tela">
+    android:background="@drawable/bg_quarta_tela"
+    tools:context=".view.ScreenUnderConstruction">
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/bt_voltar_tela_login"
         style="@style/Button"
-        android:background="#3C63A3FF"
-
         android:layout_width="0dp"
+
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
+        android:background="#3C63A3FF"
         android:maxWidth="320dp"
         android:text="Voltar"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="25sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="parent"
-        app:layout_constraintBottom_toTopOf="parent"
         tools:ignore="TextSizeCheck" />
 
 

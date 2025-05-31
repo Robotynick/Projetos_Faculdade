@@ -1,13 +1,18 @@
-package com.example.Eprocad;
+package com.example.Eprocad.view;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.example.Eprocad.R;
 import com.google.firebase.auth.FirebaseAuth;
+
 import java.util.Objects;
 
 public class ScreenUnderConstruction extends AppCompatActivity {
@@ -32,7 +37,7 @@ public class ScreenUnderConstruction extends AppCompatActivity {
         // Adiciona uma ação ao botão que, ao ser clicado, inicia a LoginScreen.
         bt_voltar_tela_login.setOnClickListener(v -> {
             FirebaseAuth.getInstance().signOut(); // Realiza o logout do usuário
-            Intent intent= new Intent(ScreenUnderConstruction.this, LoginScreen.class);
+            Intent intent = new Intent(ScreenUnderConstruction.this, LoginScreen.class);
             startActivity(intent);
             finish();
         });
@@ -46,7 +51,7 @@ public class ScreenUnderConstruction extends AppCompatActivity {
     }
 
     // Metodo para associar os elementos da interface aos seus respectivos objetos.
-    private void IniciarComponentes(){
+    private void IniciarComponentes() {
         bt_voltar_tela_login = findViewById(R.id.bt_voltar_tela_login);
     }
 }

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_login"
-    tools:context=".MainScreen">
+    tools:context=".view.MainScreen">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -40,11 +40,11 @@
                 android:background="@drawable/bg_ic_search"
                 android:iconifiedByDefault="false"
                 android:queryHint="Digite aqui"
-                app:layout_constraintWidth_max="488dp"
                 app:layout_constraintEnd_toStartOf="@id/bt_profile"
-                app:layout_constraintWidth_percent="0.70"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_max="488dp"
+                app:layout_constraintWidth_percent="0.70"
                 tools:ignore="TextContrastCheck,TextFields" />
 
             <androidx.appcompat.widget.AppCompatImageButton
@@ -70,9 +70,9 @@
                 android:contentDescription="Botão a definir"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/search"
                 app:layout_constraintWidth_max="520dp"
-                app:layout_constraintWidth_percent="0.80"
-                app:layout_constraintTop_toBottomOf="@id/search" />
+                app:layout_constraintWidth_percent="0.80" />
 
             <View
                 android:id="@+id/containerComponents_2"

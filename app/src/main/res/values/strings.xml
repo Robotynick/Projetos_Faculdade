@@ -18,7 +18,6 @@
     <string name="text_name_sign_up">Nome completo</string>
     <string name="text_age_sign_up">Idade</string>
     <string name="text_password">Senha</string>
-    <string name="text_register">Registre-se</string>
     <string name="bt_sign_up">Cadastrar</string>
     <string name="bt_ic_eyeslash">Ícone para ver a senha digitada</string>
     <string name="bt_profile">Botão de perfil</string>

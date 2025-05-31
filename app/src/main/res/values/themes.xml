@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Theme.EPROCADApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
@@ -34,17 +34,7 @@
         <item name="android:minHeight">48dp</item>
         <item name="android:drawablePadding">8dp</item>
         <item name="android:textColorHint">@color/color_hint_edit_text</item>
-    </style>
-
-    <style name="Forgotten_password">
-        <item name="android:padding">2dp</item>
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginLeft">120dp</item>
-        <item name="android:layout_marginRight">120dp</item>
-        <item name="android:layout_marginTop">15dp</item>
-
-
+        <item name="android:textColor">@color/text_color</item>
     </style>
 
     <style name="Button">
@@ -61,25 +51,9 @@
         <item name="layout_constraintWidth_percent">0.45</item>
     </style>
 
-    <style name="Create_account">
-        <item name="cornerRadius">20dp</item>
-        <item name="android:padding">2dp</item>
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginLeft">120dp</item>
-        <item name="android:layout_marginRight">120dp</item>
-        <item name="android:layout_marginTop">15dp</item>
-    </style>
-
     <style name="SearchViewStyle" parent="Widget.AppCompat.SearchView">
         <item name="android:background">@drawable/bg_ic_search</item>
         <item name="android:queryBackground">@color/transparent</item>
-    </style>
-
-    <style name="ContainerComponents_2">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">400dp</item>
-        <item name="android:background">@color/bg_login</item>
     </style>
 
     <style name="StandartButton">

@@ -6,9 +6,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_login"
-    tools:context=".LoginScreen">
+    tools:context=".view.LoginScreen">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -61,11 +62,11 @@
                     <EditText
                         android:id="@+id/edit_email"
                         style="@style/Edit_Text"
-                        android:paddingStart="12dp"
                         android:autofillHints="emailAddress"
                         android:drawableStart="@drawable/ic_mail"
                         android:hint="@string/email"
                         android:inputType="textEmailAddress"
+                        android:paddingStart="12dp"
                         app:layout_constraintEnd_toEndOf="@id/containerComponents"
                         app:layout_constraintStart_toStartOf="@id/containerComponents"
                         app:layout_constraintTop_toTopOf="@id/containerComponents" />
@@ -82,7 +83,7 @@
                         app:layout_constraintTop_toBottomOf="@id/edit_email" />
 
                     <androidx.appcompat.widget.AppCompatImageButton
-                        android:id="@+id/bt_eyeslash"
+                        android:id="@+id/bt_eye_off"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:background="?attr/selectableItemBackgroundBorderless"
@@ -159,6 +160,7 @@
                         app:layout_constraintStart_toStartOf="parent" />
 
                     <ImageView
+                        android:id="@+id/bola_amarela_inferior"
                         android:layout_width="188dp"
                         android:layout_height="94dp"
                         android:layout_marginStart="108dp"
